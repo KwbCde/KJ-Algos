@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.print("Kwab and Jack");
+        System.out.print("Kwab n Jack");
     }
 }
