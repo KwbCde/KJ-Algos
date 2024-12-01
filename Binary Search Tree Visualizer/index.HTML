@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJ Algos</title>
+    <link rel="icon" type="image/png" href="assets/KJ_loading-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling during animation */
+}
+
+#logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255);
+    z-index: 10;
+    transition: transform 1s ease-out;
+}
+
+#logo {
+    max-width: 50%; /* Adjust logo size as needed */
+    height: auto;
+}
+
+#content {
+    display: none; /* Hide content until animation ends */
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.dark{
+    color: white;
+    background-color: black;
+}
+.btn-dark{
+    background-color: black;
+    color: white;
+}
+div{
+    width: 100%;
+    height: 100%;
+}
+/*  */
+    </style>
+    <div id="logo-container">
+        <img src="assets/KJ_loading-removebg-preview.png" alt="KJ Algos Logo" id="logo">
+    </div>
+    <div id="content" class="dark">
+        <p>This is my first website</p>
+        <button id="action-button" class="btn-dark">Dark Mode</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const logoContainer = document.getElementById("logo-container");
+            const content = document.getElementById("content");
+            const button = document.getElementById("action-button");
+
+            // Wait for 2 seconds before starting the animation
+            setTimeout(() => {
+                logoContainer.style.transform = "translateY(-100%)"; // Slide up the logo
+                content.style.display = "block"; // Show the main content
+                document.body.style.overflow = "auto"; // Re-enable scrolling
+            }, 2000);
+
+            // Add functionality to the button
+            button.addEventListener("click", () => {
+                alert("Button was clicked!");
+            });
+        });
+    </script>
+</body>
+</html>
