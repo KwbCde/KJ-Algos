@@ -16,8 +16,18 @@ class TreeNode():
             else: 
                 self.right.insert(value)
                 
+    def find(self, value):
+        if value < self.value:
+            if self.left is None:
+                return False
+            else:
+                return self.left.find(value)
+        elif value > self.value:
+            if self.right is None:
+                return False
+            else:
+                return self.right.find(value)
+        else:
+            return True
 tree = TreeNode(5)
-tree.insert(5)
 tree.insert(4)
-tree.insert(3)
-tree.insert(7)
