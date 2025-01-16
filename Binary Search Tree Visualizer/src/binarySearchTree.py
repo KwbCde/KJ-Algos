@@ -31,3 +31,4 @@ class TreeNode():
             return True
 tree = TreeNode(5)
 tree.insert(4)
+print(tree.find(5))
