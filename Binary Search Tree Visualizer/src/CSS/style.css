@@ -1,4 +1,11 @@
-/* NAVBAR CONTAINER */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 5EM; 
+    padding-left: 3EM;
+}
+
+/* Ensure nav elements are spaced properly */
 nav {
     display: flex;
     align-items: center;  
@@ -12,58 +19,65 @@ nav {
     box-sizing: border-box; 
 }
 
-/* NAVBAR MENU */
+/* Aligns menu items horizontally */
 .header__menu {
     display: flex; 
     flex-direction: row; 
-    align-items: center;  /* Ensures all menu items align vertically */
+    align-items: center;
     padding: 0;
     margin: 0;
+    margin-right: auto;
 }
 
-/* NAVBAR ITEMS */
+/* Removes list styling and spaces out items */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center; /* Aligns the list items vertically */
+    align-items: center;
 }
 
 nav ul li {
-    display: inline-block; 
-    margin-right: 20px; /* Space between links */
+    display: inline-block;
+    margin-right: 20px; /* Space between menu items */
 }
 
-/* NAVBAR LINKS */
+/* Styles the links in the navbar */
 nav ul li a {
-    text-decoration: none; /* Remove underline */
-    color: rgb(255, 255, 255); /* Link color */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-family: Arial, sans-serif;
     display: flex;
-    align-items: center; /* Ensures text aligns properly */
-    height: 100%; /* Matches the navbar height */
+    align-items: center;
+    height: 100%;
 }
 
 nav ul li a:hover {
-    color: rgb(160, 160, 244); /* Change color on hover */
+    color: rgb(160, 160, 244);
 }
 
 /* LOGO */
 #logo-container {
     display: flex;
-    align-items: center; /* Vertically centers logo */
+    align-items: center;
 }
 
 #logo {
-    max-height: 40px; /* Limits logo height */
+    max-height: 40px;
     width: auto;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    padding-top: 80px; /* Ensures content starts below navbar */
-    padding-left: 10px;
+.nav-button {
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.nav-button:hover {
+    background-color: #000000;
 }
